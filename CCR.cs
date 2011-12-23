@@ -13,12 +13,13 @@
 //
 
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace CCR {
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=false)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=false)]
     public class ContinuityOfCareRecord {
         
         /// <remarks/>
@@ -34,98 +35,98 @@ namespace CCR {
         public DateTimeType DateTime;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Patient")]
+        [XmlElementAttribute("Patient")]
         public List<ContinuityOfCareRecordPatient> Patient;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="ActorLink", IsNullable=false)]
+        [XmlArrayItem(ElementName="ActorLink", IsNullable=false)]
         public List<ActorReferenceType> From;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="ActorLink", IsNullable=false)]
+        [XmlArrayItem(ElementName="ActorLink", IsNullable=false)]
         public List<ActorReferenceType> To;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Purpose")]
+        [XmlElementAttribute("Purpose")]
         public List<PurposeType> Purpose;
         
         /// <remarks/>
         public ContinuityOfCareRecordBody Body;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Actor", IsNullable=false)]
+        [XmlArrayItem(ElementName="Actor", IsNullable=false)]
         public List<ActorType> Actors;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Reference", IsNullable=false)]
+        [XmlArrayItem(ElementName="Reference", IsNullable=false)]
         public List<ReferenceType> References;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Comment", IsNullable=false)]
+        [XmlArrayItem(ElementName="Comment", IsNullable=false)]
         public List<CommentType> Comments;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="CCRSignature", IsNullable=false)]
+        [XmlArrayItem(ElementName="CCRSignature", IsNullable=false)]
         public List<SignatureType> Signatures;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute("Description", Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstructionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MethodType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PositionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SiteType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuredProductTypeProductForm))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuredProductTypeProductSize))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectionRoute))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VehicleTypeProductForm))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VehicleTypeProductSize))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute("Description", Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(InstructionType))]
+    [XmlIncludeAttribute(typeof(MethodType))]
+    [XmlIncludeAttribute(typeof(PositionType))]
+    [XmlIncludeAttribute(typeof(SiteType))]
+    [XmlIncludeAttribute(typeof(StructuredProductTypeProductForm))]
+    [XmlIncludeAttribute(typeof(StructuredProductTypeProductSize))]
+    [XmlIncludeAttribute(typeof(DirectionRoute))]
+    [XmlIncludeAttribute(typeof(VehicleTypeProductForm))]
+    [XmlIncludeAttribute(typeof(VehicleTypeProductSize))]
     public class CodedDescriptionType {
         
         /// <remarks/>
         public string Text;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ObjectAttribute")]
+        [XmlElementAttribute("ObjectAttribute")]
         public List<CodedDescriptionTypeObjectAttribute> ObjectAttribute;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CodedDescriptionTypeObjectAttribute {
         
         /// <remarks/>
         public string Attribute;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AttributeValue")]
+        [XmlElementAttribute("AttributeValue")]
         public List<CodedDescriptionTypeObjectAttributeAttributeValue> AttributeValue;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CodedDescriptionTypeObjectAttributeAttributeValue {
         
         /// <remarks/>
         public object Value;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectionAdministrationTiming))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(DirectionAdministrationTiming))]
     public class DateTimeType {
         
         /// <remarks/>
@@ -141,23 +142,23 @@ namespace CCR {
         public CodedDescriptionType ApproximateDateTime;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTimeRange")]
+        [XmlElementAttribute("DateTimeRange")]
         public List<DateTimeTypeDateTimeRange> DateTimeRange;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute("Age", Namespace="urn:astm-org:CCR", IsNullable=true)]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuantityType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndicationTypePhysiologicalParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoseCalculationTypeVariable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VehicleTypeQuantity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuredProductTypeProductStrength))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuredProductTypeProductConcentration))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectionDose))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VehicleTypeProductStrength))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VehicleTypeProductConcentration))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuredProductTypeProductSizeDimensionsDimension))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute("Age", Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlIncludeAttribute(typeof(QuantityType))]
+    [XmlIncludeAttribute(typeof(IndicationTypePhysiologicalParameter))]
+    [XmlIncludeAttribute(typeof(DoseCalculationTypeVariable))]
+    [XmlIncludeAttribute(typeof(VehicleTypeQuantity))]
+    [XmlIncludeAttribute(typeof(StructuredProductTypeProductStrength))]
+    [XmlIncludeAttribute(typeof(StructuredProductTypeProductConcentration))]
+    [XmlIncludeAttribute(typeof(DirectionDose))]
+    [XmlIncludeAttribute(typeof(VehicleTypeProductStrength))]
+    [XmlIncludeAttribute(typeof(VehicleTypeProductConcentration))]
+    [XmlIncludeAttribute(typeof(StructuredProductTypeProductSizeDimensionsDimension))]
     public class MeasureType {
         
         /// <remarks/>
@@ -167,24 +168,24 @@ namespace CCR {
         public MeasureTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class MeasureTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CodeType {
         
         /// <remarks/>
@@ -198,11 +199,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class QuantityType : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string QuantitySequencePosition;
         
         /// <remarks/>
@@ -210,11 +211,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class IndicationTypePhysiologicalParameter : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ParameterSequencePosition;
         
         /// <remarks/>
@@ -222,14 +223,14 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DoseCalculationTypeVariable : MeasureType {
         
         /// <remarks/>
         public string VariableIdentifier;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string VariableSequencePosition;
         
         /// <remarks/>
@@ -237,11 +238,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleTypeQuantity : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string QuantitySequencePosition;
         
         /// <remarks/>
@@ -249,11 +250,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeProductStrength : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string StrengthSequencePosition;
         
         /// <remarks/>
@@ -261,11 +262,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeProductConcentration : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ConcentrationSequencePosition;
         
         /// <remarks/>
@@ -273,15 +274,15 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DirectionDose : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Rate")]
+        [XmlElementAttribute("Rate")]
         public List<RateType> Rate;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string DoseSequencePosition;
         
         /// <remarks/>
@@ -289,7 +290,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class RateType {
         
         /// <remarks/>
@@ -302,11 +303,11 @@ namespace CCR {
         public RateTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string RateSequencePosition;
         
         /// <remarks/>
@@ -314,23 +315,23 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class RateTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleTypeProductStrength : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string StrengthSequencePosition;
         
         /// <remarks/>
@@ -338,11 +339,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleTypeProductConcentration : MeasureType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ConcentrationSequencePosition;
         
         /// <remarks/>
@@ -350,7 +351,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeProductSizeDimensionsDimension : MeasureType {
         
         /// <remarks/>
@@ -358,7 +359,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DateTimeTypeDateTimeRange {
         
         /// <remarks/>
@@ -369,7 +370,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DateTimeTypeDateTimeRangeBeginRange {
         
         /// <remarks/>
@@ -383,7 +384,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DateTimeTypeDateTimeRangeEndRange {
         
         /// <remarks/>
@@ -397,11 +398,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DirectionAdministrationTiming : DateTimeType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string TimingSequencePosition;
         
         /// <remarks/>
@@ -409,7 +410,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ContinuityOfCareRecordPatient {
         
         /// <remarks/>
@@ -417,53 +418,53 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute("Actor", Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FamilyHistoryTypeFamilyMember))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute("Actor", Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(FamilyHistoryTypeFamilyMember))]
     public class ActorReferenceType {
         
         /// <remarks/>
         public string ActorID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ActorRole")]
+        [XmlElementAttribute("ActorRole")]
         public List<CodedDescriptionType> ActorRole;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FamilyHistoryTypeFamilyMember : ActorReferenceType {
         
         /// <remarks/>
         public CurrentHealthStatusType HealthStatus;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<FamilyHistoryTypeFamilyMemberSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CurrentHealthStatusType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
@@ -473,65 +474,65 @@ namespace CCR {
         public string CauseOfDeath;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<CurrentHealthStatusTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalCCRLinkSource))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(InternalCCRLinkSource))]
     public class SourceType {
         
         /// <remarks/>
         public CodedDescriptionType Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Actor")]
+        [XmlElementAttribute("Actor")]
         public List<ActorReferenceType> Actor;
         
         /// <remarks/>
         public DateTimeType DateTime;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class InternalCCRLinkSource : SourceType {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
     public class InternalCCRLink {
         
         /// <remarks/>
         public string LinkID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LinkRelationship")]
+        [XmlElementAttribute("LinkRelationship")]
         public List<string> LinkRelationship;
         
         /// <remarks/>
@@ -539,7 +540,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CurrentHealthStatusTypeSignature {
         
         /// <remarks/>
@@ -547,7 +548,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FamilyHistoryTypeFamilyMemberSignature {
         
         /// <remarks/>
@@ -555,44 +556,44 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PurposeType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Description")]
+        [XmlElementAttribute("Description")]
         public List<CodedDescriptionType> Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("OrderRequest")]
+        [XmlElementAttribute("OrderRequest")]
         public List<PlanOfCareType> OrderRequest;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Indication", IsNullable=false)]
+        [XmlArrayItem(ElementName="Indication", IsNullable=false)]
         public List<IndicationType> Indications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PlanOfCareType : InterventionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Goal", IsNullable=false)]
+        [XmlArrayItem(ElementName="Goal", IsNullable=false)]
         public List<GoalType> Goals;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string OrderSequencePosition;
         
         /// <remarks/>
@@ -600,44 +601,44 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class GoalType : EncounterType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Outcome", IsNullable=false)]
+        [XmlArrayItem(ElementName="Outcome", IsNullable=false)]
         public List<CCRCodedDataObjectType> Milestones;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterventionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlanOfCareType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsuranceType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FunctionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProblemType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FamilyHistoryType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SocialHistoryType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuredProductType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EncounterType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GoalType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlanType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AuthorizationType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpisodeType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrderRxHistoryType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TestType))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(InterventionType))]
+    [XmlIncludeAttribute(typeof(PlanOfCareType))]
+    [XmlIncludeAttribute(typeof(InsuranceType))]
+    [XmlIncludeAttribute(typeof(FunctionType))]
+    [XmlIncludeAttribute(typeof(ProblemType))]
+    [XmlIncludeAttribute(typeof(FamilyHistoryType))]
+    [XmlIncludeAttribute(typeof(SocialHistoryType))]
+    [XmlIncludeAttribute(typeof(AlertType))]
+    [XmlIncludeAttribute(typeof(StructuredProductType))]
+    [XmlIncludeAttribute(typeof(ResultType))]
+    [XmlIncludeAttribute(typeof(EncounterType))]
+    [XmlIncludeAttribute(typeof(GoalType))]
+    [XmlIncludeAttribute(typeof(PlanType))]
+    [XmlIncludeAttribute(typeof(AuthorizationType))]
+    [XmlIncludeAttribute(typeof(EpisodeType))]
+    [XmlIncludeAttribute(typeof(OrderRxHistoryType))]
+    [XmlIncludeAttribute(typeof(TestType))]
     public class CCRCodedDataObjectType {
         
         /// <remarks/>
         public string CCRDataObjectID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IDs")]
+        [XmlElementAttribute("IDs")]
         public List<IDType> IDs;
         
         /// <remarks/>
@@ -650,33 +651,33 @@ namespace CCR {
         public CodedDescriptionType Status;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<CCRCodedDataObjectTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute("IDs", Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute("IDs", Namespace="urn:astm-org:CCR", IsNullable=true)]
     public class IDType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
@@ -689,28 +690,28 @@ namespace CCR {
         public ActorReferenceType IssuedBy;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<IDTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class IDTypeSignature {
         
         /// <remarks/>
@@ -718,7 +719,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CCRCodedDataObjectTypeSignature {
         
         /// <remarks/>
@@ -726,48 +727,48 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlanOfCareType))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(PlanOfCareType))]
     public class InterventionType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Procedure", IsNullable=false)]
+        [XmlArrayItem(ElementName="Procedure", IsNullable=false)]
         public List<ProcedureType> Procedures;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Product", IsNullable=false)]
+        [XmlArrayItem(ElementName="Product", IsNullable=false)]
         public List<StructuredProductType> Products;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Medication", IsNullable=false)]
+        [XmlArrayItem(ElementName="Medication", IsNullable=false)]
         public List<StructuredProductType> Medications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Immunization", IsNullable=false)]
+        [XmlArrayItem(ElementName="Immunization", IsNullable=false)]
         public List<StructuredProductType> Immunizations;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Service", IsNullable=false)]
+        [XmlArrayItem(ElementName="Service", IsNullable=false)]
         public List<EncounterType> Services;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Encounter", IsNullable=false)]
+        [XmlArrayItem(ElementName="Encounter", IsNullable=false)]
         public List<EncounterType> Encounters;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Authorization", IsNullable=false)]
+        [XmlArrayItem(ElementName="Authorization", IsNullable=false)]
         public List<AuthorizationType> Authorizatons;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ProcedureType {
         
         /// <remarks/>
         public string CCRDataObjectID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
@@ -783,78 +784,78 @@ namespace CCR {
         public CodedDescriptionType Status;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<ProcedureTypeSignature> Signature;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(IsNullable=false)]
+        [XmlArrayItem(IsNullable=false)]
         public List<Location> Locations;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Practitioner", IsNullable=false)]
+        [XmlArrayItem(ElementName="Practitioner", IsNullable=false)]
         public List<ActorReferenceType> Practitioners;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Frequency")]
+        [XmlElementAttribute("Frequency")]
         public List<FrequencyType> Frequency;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Interval")]
+        [XmlElementAttribute("Interval")]
         public List<IntervalType> Interval;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Duration")]
+        [XmlElementAttribute("Duration")]
         public List<DurationType> Duration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Indication", IsNullable=false)]
+        [XmlArrayItem(ElementName="Indication", IsNullable=false)]
         public List<IndicationType> Indications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Instruction", IsNullable=false)]
+        [XmlArrayItem(ElementName="Instruction", IsNullable=false)]
         public List<CodedDescriptionType> Instructions;
         
         /// <remarks/>
         public CCRCodedDataObjectType Consent;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Product", IsNullable=false)]
+        [XmlArrayItem(ElementName="Product", IsNullable=false)]
         public List<StructuredProductType> Products;
         
         /// <remarks/>
         public CodedDescriptionType Substance;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Method")]
+        [XmlElementAttribute("Method")]
         public List<MethodType> Method;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Position")]
+        [XmlElementAttribute("Position")]
         public List<PositionType> Position;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Site")]
+        [XmlElementAttribute("Site")]
         public List<SiteType> Site;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ProcedureTypeSignature {
         
         /// <remarks/>
@@ -862,8 +863,8 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
     public class Location {
         
         /// <remarks/>
@@ -874,7 +875,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FrequencyType {
         
         /// <remarks/>
@@ -887,11 +888,11 @@ namespace CCR {
         public FrequencyTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string FrequencySequencePosition;
         
         /// <remarks/>
@@ -899,19 +900,19 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FrequencyTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class IntervalType {
         
         /// <remarks/>
@@ -924,11 +925,11 @@ namespace CCR {
         public IntervalTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string IntervalSequencePosition;
         
         /// <remarks/>
@@ -936,26 +937,26 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class IntervalTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DurationType {
         
         /// <remarks/>
         public CodedDescriptionType Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
@@ -965,11 +966,11 @@ namespace CCR {
         public DurationTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string DurationSequencePosition;
         
         /// <remarks/>
@@ -977,58 +978,58 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DurationTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class IndicationType {
         
         /// <remarks/>
         public CodedDescriptionType PRNFlag;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Description")]
+        [XmlElementAttribute("Description")]
         public List<CodedDescriptionType> Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Problem")]
+        [XmlElementAttribute("Problem")]
         public List<ProblemType> Problem;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("PhysiologicalParameter")]
+        [XmlElementAttribute("PhysiologicalParameter")]
         public List<IndicationTypePhysiologicalParameter> PhysiologicalParameter;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<IndicationTypeSignature> Signature;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string IndicationSequencePosition;
         
         /// <remarks/>
@@ -1036,7 +1037,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ProblemType : CCRCodedDataObjectType {
         
         /// <remarks/>
@@ -1050,7 +1051,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class EpisodesType {
         
         /// <remarks/>
@@ -1060,32 +1061,32 @@ namespace CCR {
         public MeasureType Frequency;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Episode")]
+        [XmlElementAttribute("Episode")]
         public List<EpisodeType> Episode;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<EpisodesTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class EpisodeType : CCRCodedDataObjectType {
         
         /// <remarks/>
@@ -1093,7 +1094,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class EpisodesTypeSignature {
         
         /// <remarks/>
@@ -1101,7 +1102,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PatientKnowledgeType {
         
         /// <remarks/>
@@ -1111,28 +1112,28 @@ namespace CCR {
         public CodedDescriptionType Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<PatientKnowledgeTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PatientKnowledgeTypeSignature {
         
         /// <remarks/>
@@ -1140,7 +1141,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class IndicationTypeSignature {
         
         /// <remarks/>
@@ -1148,31 +1149,31 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Product")]
+        [XmlElementAttribute("Product")]
         public List<StructuredProductTypeProduct> Product;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Quantity")]
+        [XmlElementAttribute("Quantity")]
         public List<QuantityType> Quantity;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(IsNullable=false)]
+        [XmlArrayItem(IsNullable=false)]
         public List<Direction> Directions;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Instruction", IsNullable=false)]
+        [XmlArrayItem(ElementName="Instruction", IsNullable=false)]
         public List<InstructionType> PatientInstructions;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Instruction", IsNullable=false)]
+        [XmlArrayItem(ElementName="Instruction", IsNullable=false)]
         public List<InstructionType> FulfillmentInstructions;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Refill", IsNullable=false)]
+        [XmlArrayItem(ElementName="Refill", IsNullable=false)]
         public List<StructuredProductTypeRefillsRefill> Refills;
         
         /// <remarks/>
@@ -1185,12 +1186,12 @@ namespace CCR {
         public Reaction Reaction;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Fulfillment", IsNullable=false)]
+        [XmlArrayItem(ElementName="Fulfillment", IsNullable=false)]
         public List<OrderRxHistoryType> FulfillmentHistory;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeProduct {
         
         /// <remarks/>
@@ -1200,26 +1201,26 @@ namespace CCR {
         public CodedDescriptionType BrandName;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Strength")]
+        [XmlElementAttribute("Strength")]
         public List<StructuredProductTypeProductStrength> Strength;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Form")]
+        [XmlElementAttribute("Form")]
         public List<StructuredProductTypeProductForm> Form;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Concentration")]
+        [XmlElementAttribute("Concentration")]
         public List<StructuredProductTypeProductConcentration> Concentration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Size")]
+        [XmlElementAttribute("Size")]
         public List<StructuredProductTypeProductSize> Size;
         
         /// <remarks/>
         public ActorReferenceType Manufacturer;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ProductSequencePosition;
         
         /// <remarks/>
@@ -1227,11 +1228,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeProductForm : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string FormSequencePosition;
         
         /// <remarks/>
@@ -1239,15 +1240,15 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeProductSize : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Dimension", IsNullable=false)]
+        [XmlArrayItem(ElementName="Dimension", IsNullable=false)]
         public List<StructuredProductTypeProductSizeDimensionsDimension> Dimensions;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string SizeSequencePosition;
         
         /// <remarks/>
@@ -1255,8 +1256,8 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
     public class Direction {
         
         /// <remarks/>
@@ -1269,54 +1270,54 @@ namespace CCR {
         public CodedDescriptionType DeliveryMethod;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Dose")]
+        [XmlElementAttribute("Dose")]
         public List<DirectionDose> Dose;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DoseCalculation")]
+        [XmlElementAttribute("DoseCalculation")]
         public List<DirectionDoseCalculation> DoseCalculation;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Vehicle")]
+        [XmlElementAttribute("Vehicle")]
         public List<VehicleType> Vehicle;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Route")]
+        [XmlElementAttribute("Route")]
         public List<DirectionRoute> Route;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Site")]
+        [XmlElementAttribute("Site")]
         public List<SiteType> Site;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AdministrationTiming")]
+        [XmlElementAttribute("AdministrationTiming")]
         public List<DirectionAdministrationTiming> AdministrationTiming;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Frequency")]
+        [XmlElementAttribute("Frequency")]
         public List<FrequencyType> Frequency;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Interval")]
+        [XmlElementAttribute("Interval")]
         public List<IntervalType> Interval;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Duration")]
+        [XmlElementAttribute("Duration")]
         public List<DurationType> Duration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DoseRestriction")]
+        [XmlElementAttribute("DoseRestriction")]
         public List<DirectionDoseRestriction> DoseRestriction;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Indication")]
+        [XmlElementAttribute("Indication")]
         public List<IndicationType> Indication;
         
         /// <remarks/>
         public CodedDescriptionType StopIndicator;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string DirectionSequencePosition;
         
         /// <remarks/>
@@ -1324,15 +1325,15 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DirectionDoseCalculation : DoseCalculationType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Rate")]
+        [XmlElementAttribute("Rate")]
         public List<RateType> Rate;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string CalculationSequencePosition;
         
         /// <remarks/>
@@ -1340,16 +1341,16 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectionDoseCalculation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectionDoseRestriction))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(DirectionDoseCalculation))]
+    [XmlIncludeAttribute(typeof(DirectionDoseRestriction))]
     public class DoseCalculationType {
         
         /// <remarks/>
         public MeasureType Dose;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Variable")]
+        [XmlElementAttribute("Variable")]
         public List<DoseCalculationTypeVariable> Variable;
         
         /// <remarks/>
@@ -1357,27 +1358,27 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DoseCalculationTypeCalculationEquation {
         
         /// <remarks/>
         public string Value;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DirectionDoseRestriction : DoseCalculationType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Rate")]
+        [XmlElementAttribute("Rate")]
         public List<RateType> Rate;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string RestrictionSequencePosition;
         
         /// <remarks/>
@@ -1385,14 +1386,14 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleType {
         
         /// <remarks/>
         public CodedDescriptionType Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Product")]
+        [XmlElementAttribute("Product")]
         public List<VehicleTypeProduct> Product;
         
         /// <remarks/>
@@ -1402,11 +1403,11 @@ namespace CCR {
         public IDType IDs;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Quantity")]
+        [XmlElementAttribute("Quantity")]
         public List<VehicleTypeQuantity> Quantity;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string VehicleSequencePosition;
         
         /// <remarks/>
@@ -1417,7 +1418,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleTypeProduct {
         
         /// <remarks/>
@@ -1427,23 +1428,23 @@ namespace CCR {
         public CodedDescriptionType BrandName;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Strength")]
+        [XmlElementAttribute("Strength")]
         public List<VehicleTypeProductStrength> Strength;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Form")]
+        [XmlElementAttribute("Form")]
         public List<VehicleTypeProductForm> Form;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Concentration")]
+        [XmlElementAttribute("Concentration")]
         public List<VehicleTypeProductConcentration> Concentration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Size")]
+        [XmlElementAttribute("Size")]
         public List<VehicleTypeProductSize> Size;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ProductSequencePosition;
         
         /// <remarks/>
@@ -1451,11 +1452,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleTypeProductForm : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string FormSequencePosition;
         
         /// <remarks/>
@@ -1463,11 +1464,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class VehicleTypeProductSize : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string SizeSequencePosition;
         
         /// <remarks/>
@@ -1475,11 +1476,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class DirectionRoute : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string RouteSequencePosition;
         
         /// <remarks/>
@@ -1487,11 +1488,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class SiteType : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string SiteSequencePosition;
         
         /// <remarks/>
@@ -1499,11 +1500,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class InstructionType : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string instructionSequencePosition;
         
         /// <remarks/>
@@ -1511,31 +1512,31 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class StructuredProductTypeRefillsRefill {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Number", DataType="integer")]
+        [XmlElementAttribute("Number", DataType="integer")]
         public List<string> Number;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Quantity")]
+        [XmlElementAttribute("Quantity")]
         public List<QuantityType> Quantity;
         
         /// <remarks/>
         public CodedDescriptionType Status;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Comment")]
+        [XmlElementAttribute("Comment")]
         public List<CommentType> Comment;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CommentType {
         
         /// <remarks/>
@@ -1551,17 +1552,17 @@ namespace CCR {
         public CodedDescriptionType Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<ActorReferenceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
     public class Reaction {
         
         /// <remarks/>
@@ -1574,11 +1575,11 @@ namespace CCR {
         public CodedDescriptionType Severity;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Intervention", IsNullable=false)]
+        [XmlArrayItem(ElementName="Intervention", IsNullable=false)]
         public List<ReactionInterventionsIntervention> Interventions;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ReactionSequencePosition;
         
         /// <remarks/>
@@ -1586,14 +1587,14 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ReactionInterventionsIntervention {
         
         /// <remarks/>
         public string CCRDataObjectID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
@@ -1606,52 +1607,52 @@ namespace CCR {
         public CodedDescriptionType Status;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<ReactionInterventionsInterventionSignature> Signature;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Procedure", IsNullable=false)]
+        [XmlArrayItem(ElementName="Procedure", IsNullable=false)]
         public List<ProcedureType> Procedures;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Product", IsNullable=false)]
+        [XmlArrayItem(ElementName="Product", IsNullable=false)]
         public List<StructuredProductType> Products;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Product", IsNullable=false)]
+        [XmlArrayItem(ElementName="Product", IsNullable=false)]
         public List<StructuredProductType> Medications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Immunization", IsNullable=false)]
+        [XmlArrayItem(ElementName="Immunization", IsNullable=false)]
         public List<StructuredProductType> Immunizations;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Encounter", IsNullable=false)]
+        [XmlArrayItem(ElementName="Encounter", IsNullable=false)]
         public List<EncounterType> Services;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Encounter", IsNullable=false)]
+        [XmlArrayItem(ElementName="Encounter", IsNullable=false)]
         public List<EncounterType> Encounters;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ReactionInterventionsInterventionSignature {
         
         /// <remarks/>
@@ -1659,36 +1660,36 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GoalType))]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlIncludeAttribute(typeof(GoalType))]
     public class EncounterType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(IsNullable=false)]
+        [XmlArrayItem(IsNullable=false)]
         public List<Location> Locations;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Practitioner", IsNullable=false)]
+        [XmlArrayItem(ElementName="Practitioner", IsNullable=false)]
         public List<ActorReferenceType> Practitioners;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Frequency")]
+        [XmlElementAttribute("Frequency")]
         public List<FrequencyType> Frequency;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Interval")]
+        [XmlElementAttribute("Interval")]
         public List<IntervalType> Interval;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Duration")]
+        [XmlElementAttribute("Duration")]
         public List<DurationType> Duration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Indication", IsNullable=false)]
+        [XmlArrayItem(ElementName="Indication", IsNullable=false)]
         public List<IndicationType> Indications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Instruction", IsNullable=false)]
+        [XmlArrayItem(ElementName="Instruction", IsNullable=false)]
         public List<CodedDescriptionType> Instructions;
         
         /// <remarks/>
@@ -1696,7 +1697,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class OrderRxHistoryType : CCRCodedDataObjectType {
         
         /// <remarks/>
@@ -1709,7 +1710,7 @@ namespace CCR {
         public ActorReferenceType Location;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Reaction")]
+        [XmlElementAttribute("Reaction")]
         public List<Reaction> Reaction;
         
         /// <remarks/>
@@ -1722,23 +1723,23 @@ namespace CCR {
         public ActorReferenceType Manufacturer;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Strength")]
+        [XmlElementAttribute("Strength")]
         public List<MeasureType> Strength;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Form")]
+        [XmlElementAttribute("Form")]
         public List<CodedDescriptionType> Form;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Concentration")]
+        [XmlElementAttribute("Concentration")]
         public List<MeasureType> Concentration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Quantity")]
+        [XmlElementAttribute("Quantity")]
         public List<MeasureType> Quantity;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LabelInstructions")]
+        [XmlElementAttribute("LabelInstructions")]
         public List<InstructionType> LabelInstructions;
         
         /// <remarks/>
@@ -1746,11 +1747,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class MethodType : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string MethodSequencePosition;
         
         /// <remarks/>
@@ -1758,11 +1759,11 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PositionType : CodedDescriptionType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string PositionSequencePosition;
         
         /// <remarks/>
@@ -1770,44 +1771,44 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class AuthorizationType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Purpose")]
+        [XmlElementAttribute("Purpose")]
         public List<PurposeType> Purpose;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Practitioner", IsNullable=false)]
+        [XmlArrayItem(ElementName="Practitioner", IsNullable=false)]
         public List<ActorReferenceType> Practitioners;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Procedure", IsNullable=false)]
+        [XmlArrayItem(ElementName="Procedure", IsNullable=false)]
         public List<ProcedureType> Procedures;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Product", IsNullable=false)]
+        [XmlArrayItem(ElementName="Product", IsNullable=false)]
         public List<StructuredProductType> Products;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Medication", IsNullable=false)]
+        [XmlArrayItem(ElementName="Medication", IsNullable=false)]
         public List<StructuredProductType> Medications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Immunization", IsNullable=false)]
+        [XmlArrayItem(ElementName="Immunization", IsNullable=false)]
         public List<StructuredProductType> Immunizations;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Encounter", IsNullable=false)]
+        [XmlArrayItem(ElementName="Encounter", IsNullable=false)]
         public List<EncounterType> Services;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Encounter", IsNullable=false)]
+        [XmlArrayItem(ElementName="Encounter", IsNullable=false)]
         public List<EncounterType> Encounters;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class InsuranceType : CCRCodedDataObjectType {
         
         /// <remarks/>
@@ -1817,60 +1818,60 @@ namespace CCR {
         public ActorReferenceType Subscriber;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Authorization", IsNullable=false)]
+        [XmlArrayItem(ElementName="Authorization", IsNullable=false)]
         public List<AuthorizationType> Authorizations;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FunctionType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Problem")]
+        [XmlElementAttribute("Problem")]
         public List<ProblemType> Problem;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Test")]
+        [XmlElementAttribute("Test")]
         public List<ResultType> Test;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ResultType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Procedure")]
+        [XmlElementAttribute("Procedure")]
         public List<ProcedureType> Procedure;
         
         /// <remarks/>
         public CodedDescriptionType Substance;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Test")]
+        [XmlElementAttribute("Test")]
         public List<TestType> Test;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class TestType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Method")]
+        [XmlElementAttribute("Method")]
         public List<CodedDescriptionType> Method;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Agent")]
+        [XmlElementAttribute("Agent")]
         public List<Agent> Agent;
         
         /// <remarks/>
         public TestResultType TestResult;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Normal", IsNullable=false)]
+        [XmlArrayItem(ElementName="Normal", IsNullable=false)]
         public List<NormalType> NormalResult;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Flag")]
+        [XmlElementAttribute("Flag")]
         public List<CodedDescriptionType> Flag;
         
         /// <remarks/>
@@ -1878,33 +1879,33 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlRootAttribute(Namespace="urn:astm-org:CCR", IsNullable=true)]
     public class Agent {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Product", IsNullable=false)]
+        [XmlArrayItem(ElementName="Product", IsNullable=false)]
         public List<StructuredProductType> Products;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="EnvironmentalAgent", IsNullable=false)]
+        [XmlArrayItem(ElementName="EnvironmentalAgent", IsNullable=false)]
         public List<CCRCodedDataObjectType> EnvironmentalAgents;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Problem", IsNullable=false)]
+        [XmlArrayItem(ElementName="Problem", IsNullable=false)]
         public List<ProblemType> Problems;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Procedure", IsNullable=false)]
+        [XmlArrayItem(ElementName="Procedure", IsNullable=false)]
         public List<ProcedureType> Procedures;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Result", IsNullable=false)]
+        [XmlArrayItem(ElementName="Result", IsNullable=false)]
         public List<ResultType> Results;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class TestResultType {
         
         /// <remarks/>
@@ -1914,15 +1915,15 @@ namespace CCR {
         public TestResultTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Description")]
+        [XmlElementAttribute("Description")]
         public List<CodedDescriptionType> Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ResultSequencePosition;
         
         /// <remarks/>
@@ -1930,19 +1931,19 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class TestResultTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class NormalType {
         
         /// <remarks/>
@@ -1958,51 +1959,51 @@ namespace CCR {
         public NormalTypeUnits Units;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [XmlElementAttribute(DataType="integer")]
         public string ValueSequencePosition;
         
         /// <remarks/>
         public CodedDescriptionType VariableNormalModifier;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<NormalTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class NormalTypeUnits {
         
         /// <remarks/>
         public string Unit;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Code")]
+        [XmlElementAttribute("Code")]
         public List<CodeType> Code;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class NormalTypeSignature {
         
         /// <remarks/>
@@ -2010,20 +2011,20 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FamilyHistoryType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FamilyMember")]
+        [XmlElementAttribute("FamilyMember")]
         public List<FamilyHistoryTypeFamilyMember> FamilyMember;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Problem")]
+        [XmlElementAttribute("Problem")]
         public List<FamilyHistoryTypeProblem> Problem;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FamilyHistoryTypeProblem {
         
         /// <remarks/>
@@ -2036,28 +2037,28 @@ namespace CCR {
         public EpisodesType Episodes;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<FamilyHistoryTypeProblemSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class FamilyHistoryTypeProblemSignature {
         
         /// <remarks/>
@@ -2065,7 +2066,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class SocialHistoryType : CCRCodedDataObjectType {
         
         /// <remarks/>
@@ -2073,102 +2074,102 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class AlertType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Agent")]
+        [XmlElementAttribute("Agent")]
         public List<Agent> Agent;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Reaction")]
+        [XmlElementAttribute("Reaction")]
         public List<Reaction> Reaction;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PlanType : CCRCodedDataObjectType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("OrderRequest")]
+        [XmlElementAttribute("OrderRequest")]
         public List<PlanOfCareType> OrderRequest;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ContinuityOfCareRecordBody {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Payer", IsNullable=false)]
+        [XmlArrayItem(ElementName="Payer", IsNullable=false)]
         public List<InsuranceType> Payers;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="AdvanceDirective", IsNullable=false)]
+        [XmlArrayItem(ElementName="AdvanceDirective", IsNullable=false)]
         public List<CCRCodedDataObjectType> AdvanceDirectives;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="SupportProvider", IsNullable=false)]
+        [XmlArrayItem(ElementName="SupportProvider", IsNullable=false)]
         public List<ActorReferenceType> Support;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Function", IsNullable=false)]
+        [XmlArrayItem(ElementName="Function", IsNullable=false)]
         public List<FunctionType> FunctionalStatus;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Problem", IsNullable=false)]
+        [XmlArrayItem(ElementName="Problem", IsNullable=false)]
         public List<ProblemType> Problems;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="FamilyProblemHistory", IsNullable=false)]
+        [XmlArrayItem(ElementName="FamilyProblemHistory", IsNullable=false)]
         public List<FamilyHistoryType> FamilyHistory;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="SocialHistoryElement", IsNullable=false)]
+        [XmlArrayItem(ElementName="SocialHistoryElement", IsNullable=false)]
         public List<SocialHistoryType> SocialHistory;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Alert", IsNullable=false)]
+        [XmlArrayItem(ElementName="Alert", IsNullable=false)]
         public List<AlertType> Alerts;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Medication", IsNullable=false)]
+        [XmlArrayItem(ElementName="Medication", IsNullable=false)]
         public List<StructuredProductType> Medications;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Equipment", IsNullable=false)]
+        [XmlArrayItem(ElementName="Equipment", IsNullable=false)]
         public List<StructuredProductType> MedicalEquipment;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Immunization", IsNullable=false)]
+        [XmlArrayItem(ElementName="Immunization", IsNullable=false)]
         public List<StructuredProductType> Immunizations;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Result", IsNullable=false)]
+        [XmlArrayItem(ElementName="Result", IsNullable=false)]
         public List<ResultType> VitalSigns;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Result", IsNullable=false)]
+        [XmlArrayItem(ElementName="Result", IsNullable=false)]
         public List<ResultType> Results;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Procedure", IsNullable=false)]
+        [XmlArrayItem(ElementName="Procedure", IsNullable=false)]
         public List<ProcedureType> Procedures;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Encounter", IsNullable=false)]
+        [XmlArrayItem(ElementName="Encounter", IsNullable=false)]
         public List<EncounterType> Encounters;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Plan", IsNullable=false)]
+        [XmlArrayItem(ElementName="Plan", IsNullable=false)]
         public List<PlanType> PlanOfCare;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(ElementName="Provider", IsNullable=false)]
+        [XmlArrayItem(ElementName="Provider", IsNullable=false)]
         public List<ActorReferenceType> HealthCareProviders;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorTypeInformationSystem {
         
         /// <remarks/>
@@ -2182,7 +2183,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorTypeOrganization {
         
         /// <remarks/>
@@ -2190,7 +2191,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorTypePerson {
         
         /// <remarks/>
@@ -2204,14 +2205,14 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorTypePersonName {
         
         /// <remarks/>
         public PersonNameType BirthName;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AdditionalName")]
+        [XmlElementAttribute("AdditionalName")]
         public List<PersonNameType> AdditionalName;
         
         /// <remarks/>
@@ -2222,105 +2223,105 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class PersonNameType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Given")]
+        [XmlElementAttribute("Given")]
         public List<string> Given;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Middle")]
+        [XmlElementAttribute("Middle")]
         public List<string> Middle;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Family")]
+        [XmlElementAttribute("Family")]
         public List<string> Family;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Suffix")]
+        [XmlElementAttribute("Suffix")]
         public List<string> Suffix;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Title")]
+        [XmlElementAttribute("Title")]
         public List<string> Title;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("NickName")]
+        [XmlElementAttribute("NickName")]
         public List<object> NickName;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorType {
         
         /// <remarks/>
         public string ActorObjectID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Person", Type=typeof(ActorTypePerson))]
-        [System.Xml.Serialization.XmlElementAttribute("Organization", Type=typeof(ActorTypeOrganization))]
-        [System.Xml.Serialization.XmlElementAttribute("InformationSystem", Type=typeof(ActorTypeInformationSystem))]
+        [XmlElementAttribute("Person", Type=typeof(ActorTypePerson))]
+        [XmlElementAttribute("Organization", Type=typeof(ActorTypeOrganization))]
+        [XmlElementAttribute("InformationSystem", Type=typeof(ActorTypeInformationSystem))]
         public object Item;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IDs")]
+        [XmlElementAttribute("IDs")]
         public List<IDType> IDs;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Relation")]
+        [XmlElementAttribute("Relation")]
         public List<CodedDescriptionType> Relation;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Specialty")]
+        [XmlElementAttribute("Specialty")]
         public List<CodedDescriptionType> Specialty;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Address")]
+        [XmlElementAttribute("Address")]
         public List<ActorTypeAddress> Address;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Telephone")]
+        [XmlElementAttribute("Telephone")]
         public List<CommunicationType> Telephone;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EMail")]
+        [XmlElementAttribute("EMail")]
         public List<CommunicationType> EMail;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("URL")]
+        [XmlElementAttribute("URL")]
         public List<CommunicationType> URL;
         
         /// <remarks/>
         public CodedDescriptionType Status;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<SourceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("InternalCCRLink")]
+        [XmlElementAttribute("InternalCCRLink")]
         public List<InternalCCRLink> InternalCCRLink;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferenceID")]
+        [XmlElementAttribute("ReferenceID")]
         public List<string> ReferenceID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CommentID")]
+        [XmlElementAttribute("CommentID")]
         public List<string> CommentID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Signature")]
+        [XmlElementAttribute("Signature")]
         public List<ActorTypeSignature> Signature;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorTypeAddress {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(Namespace="")]
+        [XmlAttributeAttribute(Namespace="")]
         public string Preferred;
         
         /// <remarks/>
@@ -2355,7 +2356,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class CommunicationType {
         
         /// <remarks/>
@@ -2372,7 +2373,7 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ActorTypeSignature {
         
         /// <remarks/>
@@ -2380,14 +2381,14 @@ namespace CCR {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class ReferenceType {
         
         /// <remarks/>
         public string ReferenceObjectID;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DateTime")]
+        [XmlElementAttribute("DateTime")]
         public List<DateTimeType> DateTime;
         
         /// <remarks/>
@@ -2397,16 +2398,16 @@ namespace CCR {
         public CodedDescriptionType Description;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Source")]
+        [XmlElementAttribute("Source")]
         public List<ActorReferenceType> Source;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItem(IsNullable=false)]
+        [XmlArrayItem(IsNullable=false)]
         public List<Location> Locations;
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
+    [XmlTypeAttribute(Namespace="urn:astm-org:CCR")]
     public class SignatureType {
         
         /// <remarks/>
@@ -2419,7 +2420,7 @@ namespace CCR {
         public CodedDescriptionType Type;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IDs")]
+        [XmlElementAttribute("IDs")]
         public List<IDType> IDs;
         
         /// <remarks/>
