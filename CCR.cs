@@ -13,8 +13,6 @@
 //
 
 using System.Collections.Generic;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace CCR {
     
@@ -573,7 +571,7 @@ namespace CCR {
         public List<PlanOfCareType> OrderRequest;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Indications")]
+        [System.Xml.Serialization.XmlArrayItem(ElementName="Indication", IsNullable=false)]
         public List<IndicationType> Indications;
         
         /// <remarks/>
@@ -825,7 +823,7 @@ namespace CCR {
         public List<DurationType> Duration;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Indications")]
+        [System.Xml.Serialization.XmlArrayItem(ElementName="Indication", IsNullable=false)]
         public List<IndicationType> Indications;
         
         /// <remarks/>
