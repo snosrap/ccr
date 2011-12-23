@@ -1,6 +1,6 @@
 <!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by Steven Waldren (Personal) -->
 <xs:schema xmlns="urn:astm-org:CCR" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ccr="urn:astm-org:CCR" targetNamespace="urn:astm-org:CCR" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd" />
+  <!--xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd" /-->
   <!--E2369-05, Standard Specification for the Continuity of Care (CCR) - Final Version 1.0 (V1.0) November 7, 2005,  ASTM E31.28 CCR Subcommittee-->
   <!--Copyright 2004-2005 ASTM, 100 Barr Harbor Drive, West Conshohocken, PA 19428-2959. All rights reserved.-->
   <xs:element name="ContinuityOfCareRecord">
@@ -789,7 +789,7 @@
           <xs:element name="Frequency" type="FrequencyType" minOccurs="0" maxOccurs="unbounded" />
           <xs:element name="Interval" type="IntervalType" minOccurs="0" maxOccurs="unbounded" />
           <xs:element name="Duration" type="DurationType" minOccurs="0" maxOccurs="unbounded" />
-          <xs:element ref="Indications" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element ref="Indications" minOccurs="0" />
           <xs:element ref="Instructions" minOccurs="0" />
           <xs:element name="Consent" type="CCRCodedDataObjectType" minOccurs="0" />
         </xs:sequence>
@@ -994,7 +994,6 @@
           <xs:element name="ProductName" type="CodedDescriptionType" minOccurs="0" />
           <xs:element name="BrandName" type="xs:string" minOccurs="0" />
           <xs:element name="Manufacturer" type="ActorReferenceType" minOccurs="0" />
-          <xs:element name="IDs" type="IDType" minOccurs="0" maxOccurs="unbounded" />
           <xs:element name="Strength" type="MeasureType" minOccurs="0" maxOccurs="unbounded" />
           <xs:element name="Form" type="CodedDescriptionType" minOccurs="0" maxOccurs="unbounded" />
           <xs:element name="Concentration" type="MeasureType" minOccurs="0" maxOccurs="unbounded" />
@@ -1080,7 +1079,7 @@
         <xs:element name="Frequency" type="FrequencyType" minOccurs="0" maxOccurs="unbounded" />
         <xs:element name="Interval" type="IntervalType" minOccurs="0" maxOccurs="unbounded" />
         <xs:element name="Duration" type="DurationType" minOccurs="0" maxOccurs="unbounded" />
-        <xs:element ref="Indications" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="Indications" minOccurs="0" />
         <xs:element ref="Instructions" minOccurs="0" />
         <xs:element name="Consent" type="CCRCodedDataObjectType" minOccurs="0" />
       </xs:sequence>
@@ -1104,7 +1103,7 @@
       <xs:element name="DateTime" type="DateTimeType" minOccurs="0" maxOccurs="unbounded" />
       <xs:element ref="Description" maxOccurs="unbounded" />
       <xs:element name="OrderRequest" type="PlanOfCareType" minOccurs="0" maxOccurs="unbounded" />
-      <xs:element ref="Indications" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="Indications" minOccurs="0" />
       <xs:element name="ReferenceID" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
       <xs:element name="CommentID" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
@@ -1241,7 +1240,6 @@
                   </xs:complexType>
                 </xs:element>
                 <xs:element name="Manufacturer" type="ActorReferenceType" minOccurs="0" />
-                <xs:element ref="IDs" minOccurs="0" maxOccurs="unbounded" />
                 <xs:element name="ProductSequencePosition" type="xs:integer" minOccurs="0" />
                 <xs:element name="MultipleProductModifier" type="CodedDescriptionType" minOccurs="0" />
               </xs:sequence>
@@ -1249,7 +1247,7 @@
           </xs:element>
           <!-- Dosing/ordering information -->
           <xs:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded" />
-          <xs:element ref="Directions" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element ref="Directions" minOccurs="0" />
           <xs:element name="PatientInstructions" minOccurs="0">
             <xs:complexType>
               <xs:sequence>
