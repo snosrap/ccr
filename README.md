@@ -2,7 +2,7 @@
 
 `CCR.cs` contains C# classes to manipulate Continuity of Care Record (CCR) documents.  It was generated using `xsd.exe`, the `CCR.xsd` file and some instructions at http://medbi.blogspot.com/2008/02/creating-c-bindings-for-ccr-and-ccd.html.
 
-`Program.cs` is an example program that prints out the medications in a sample CCR file (`ccrsample_Allscripts.xml`)
+`CCRTest.cs` is an example program that prints out the medications in a sample CCR file (`ccrsample_Allscripts.xml`)
 
 Example:
 
