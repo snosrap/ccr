@@ -1,6 +1,6 @@
-CCR.cs contains C# classes to manipulate Continuity of Care Record (CCR) documents.
+`CCR.cs` contains C# classes to manipulate Continuity of Care Record (CCR) documents.
 
-Program.cs is an example program that prints out the medications in a sample CCR file (ccrsample_Allscripts.xml)
+`Program.cs` is an example program that prints out the medications in a sample CCR file (`ccrsample_Allscripts.xml`)
 
 http://medbi.blogspot.com/2008/02/creating-c-bindings-for-ccr-and-ccd.html
 
